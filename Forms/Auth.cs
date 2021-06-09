@@ -18,12 +18,25 @@ namespace Production.Forms
 
             Task.Run(() =>
             {
-                using (var db = new DatabaseContext())
+                try
+                {
+                    using (var db = new DatabaseContext())
+                        Invoke(new Action(() =>
+                        {
+                            comboBox1.Items.AddRange(db.Accounts.ToArray());
+                            UseWaitCursor = false;
+                        }));
+                }
+                catch (Exception)
+                {
                     Invoke(new Action(() =>
                     {
-                        comboBox1.Items.AddRange(db.Accounts.ToArray());
-                        UseWaitCursor = false;
+                        MessageBox.Show(this, "Невозможно подключиться к SQL-серверу", "Ошибка",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Close();
                     }));
+                    
+                }
             });
         }
 
