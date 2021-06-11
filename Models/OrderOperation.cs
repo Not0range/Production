@@ -17,6 +17,7 @@ namespace Production.Models
         /// <summary>
         /// ID заказа
         /// </summary>
+        [Required]
         public int OrderID { get; set; }
 
         /// <summary>

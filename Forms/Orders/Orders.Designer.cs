@@ -54,6 +54,7 @@ namespace Production.Forms
             this.button8 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -64,6 +65,10 @@ namespace Production.Forms
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -85,7 +90,7 @@ namespace Production.Forms
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(485, 413);
+            this.dataGridView1.Size = new System.Drawing.Size(480, 413);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -183,8 +188,8 @@ namespace Production.Forms
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.splitContainer1.Location = new System.Drawing.Point(485, 0);
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -197,7 +202,7 @@ namespace Production.Forms
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
             this.splitContainer1.Panel2MinSize = 100;
-            this.splitContainer1.Size = new System.Drawing.Size(249, 413);
+            this.splitContainer1.Size = new System.Drawing.Size(250, 413);
             this.splitContainer1.SplitterDistance = 205;
             this.splitContainer1.TabIndex = 2;
             this.splitContainer1.TabStop = false;
@@ -209,7 +214,7 @@ namespace Production.Forms
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(249, 205);
+            this.groupBox1.Size = new System.Drawing.Size(250, 205);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Детали продукции";
@@ -218,9 +223,10 @@ namespace Production.Forms
             // 
             this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.HorizontalScrollbar = true;
             this.listBox1.Location = new System.Drawing.Point(3, 16);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(243, 154);
+            this.listBox1.Size = new System.Drawing.Size(244, 154);
             this.listBox1.TabIndex = 1;
             // 
             // panel2
@@ -231,7 +237,7 @@ namespace Production.Forms
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(3, 170);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(243, 32);
+            this.panel2.Size = new System.Drawing.Size(244, 32);
             this.panel2.TabIndex = 0;
             // 
             // button5
@@ -243,6 +249,7 @@ namespace Production.Forms
             this.button5.TabIndex = 0;
             this.button5.Text = "Добавить";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button7
             // 
@@ -253,6 +260,7 @@ namespace Production.Forms
             this.button7.TabIndex = 0;
             this.button7.Text = "Удалить";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -263,6 +271,7 @@ namespace Production.Forms
             this.button6.TabIndex = 0;
             this.button6.Text = "Изменить";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // groupBox2
             // 
@@ -271,7 +280,7 @@ namespace Production.Forms
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(249, 204);
+            this.groupBox2.Size = new System.Drawing.Size(250, 204);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Операции продукции";
@@ -280,9 +289,10 @@ namespace Production.Forms
             // 
             this.listBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox2.FormattingEnabled = true;
+            this.listBox2.HorizontalScrollbar = true;
             this.listBox2.Location = new System.Drawing.Point(3, 16);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(243, 153);
+            this.listBox2.Size = new System.Drawing.Size(244, 153);
             this.listBox2.TabIndex = 2;
             // 
             // panel3
@@ -293,7 +303,7 @@ namespace Production.Forms
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(3, 169);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(243, 32);
+            this.panel3.Size = new System.Drawing.Size(244, 32);
             this.panel3.TabIndex = 1;
             // 
             // button8
@@ -326,13 +336,31 @@ namespace Production.Forms
             this.button9.Text = "Изменить";
             this.button9.UseVisualStyleBackColor = true;
             // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.dataGridView1);
+            this.splitContainer2.Panel1MinSize = 300;
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.splitContainer1);
+            this.splitContainer2.Panel2MinSize = 250;
+            this.splitContainer2.Size = new System.Drawing.Size(734, 413);
+            this.splitContainer2.SplitterDistance = 480;
+            this.splitContainer2.TabIndex = 3;
+            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 461);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.splitContainer2);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(750, 500);
             this.Name = "Orders";
@@ -348,6 +376,10 @@ namespace Production.Forms
             this.panel2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -379,5 +411,6 @@ namespace Production.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Characteristics;
         private System.Windows.Forms.DataGridViewTextBoxColumn Documentation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.SplitContainer splitContainer2;
     }
 }

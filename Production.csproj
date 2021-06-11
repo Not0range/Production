@@ -92,17 +92,21 @@
     <Compile Include="Forms\Orders\Orders.Designer.cs">
       <DependentUpon>Orders.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202106080635133_Initial.cs" />
-    <Compile Include="Migrations\202106080635133_Initial.designer.cs">
-      <DependentUpon>202106080635133_Initial.cs</DependentUpon>
+    <Compile Include="Forms\Parts\AddEditPart.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Migrations\202106080746007_AddOrderAndOther.cs" />
-    <Compile Include="Migrations\202106080746007_AddOrderAndOther.designer.cs">
-      <DependentUpon>202106080746007_AddOrderAndOther.cs</DependentUpon>
+    <Compile Include="Forms\Parts\AddEditPart.Designer.cs">
+      <DependentUpon>AddEditPart.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202106082223179_AddOperations.cs" />
-    <Compile Include="Migrations\202106082223179_AddOperations.designer.cs">
-      <DependentUpon>202106082223179_AddOperations.cs</DependentUpon>
+    <Compile Include="Forms\Parts\AddEditPartOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Parts\AddEditPartOperation.Designer.cs">
+      <DependentUpon>AddEditPartOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106112122535_InitialCreate.cs" />
+    <Compile Include="Migrations\202106112122535_InitialCreate.designer.cs">
+      <DependentUpon>202106112122535_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
@@ -131,14 +135,14 @@
     <EmbeddedResource Include="Forms\Orders\Orders.resx">
       <DependentUpon>Orders.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106080635133_Initial.resx">
-      <DependentUpon>202106080635133_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Parts\AddEditPart.resx">
+      <DependentUpon>AddEditPart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106080746007_AddOrderAndOther.resx">
-      <DependentUpon>202106080746007_AddOrderAndOther.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Parts\AddEditPartOperation.resx">
+      <DependentUpon>AddEditPartOperation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106082223179_AddOperations.resx">
-      <DependentUpon>202106082223179_AddOperations.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106112122535_InitialCreate.resx">
+      <DependentUpon>202106112122535_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

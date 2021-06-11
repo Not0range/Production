@@ -12,7 +12,7 @@ namespace Production.Forms
 {
     public partial class Orders : Form
     {
-        int guild;
+        public static int guild;
         public Orders(int guild)
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace Production.Forms
                 button2.Enabled = false;
                 button3.Enabled = false;
             }
-            this.guild = guild;
+            Orders.guild = guild;
 
             UpdateTable();
         }
@@ -57,6 +57,9 @@ namespace Production.Forms
         {
             if (dataGridView1.SelectedRows.Count == 0)
                 return;
+
+            listBox1.Items.Clear();
+            listBox2.Items.Clear();
             int id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
             using (var db = new DatabaseContext())
             {
@@ -83,7 +86,7 @@ namespace Production.Forms
         {
             if (dataGridView1.SelectedRows.Count == 0)
                 return;
-            if (MessageBox.Show("Вы уверены, что желаете удалить выбранную учётную запись?", "Подтверждение", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Вы уверены, что желаете удалить выбранную запись?", "Подтверждение", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 using (var db = new DatabaseContext())
                 {
@@ -92,6 +95,44 @@ namespace Production.Forms
                     db.SaveChanges();
                 }
                 UpdateTable();
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (new AddEditPart(int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString())).ShowDialog() == DialogResult.OK)
+                dataGridView1_SelectionChanged(null, null);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem == null)
+                return;
+            if (new AddEditPart(int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()),
+                ((Models.Part)listBox1.SelectedItem).ID).ShowDialog() == DialogResult.OK)
+                dataGridView1_SelectionChanged(null, null);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem == null)
+                return;
+            if (MessageBox.Show("Вы уверены, что желаете удалить выбранную запись?", "Подтверждение", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                bool b = true;
+                if (guild != 0)
+                    using (var db = new DatabaseContext())
+                        b = db.PartOperations.All(i => i.Guild == guild);
+                if (b)
+                {
+                    using (var db = new DatabaseContext())
+                    {
+                        db.Parts.Remove(db.Parts.FirstOrDefault(i => i.ID == ((Models.Part)listBox1.SelectedItem).ID));
+                        db.SaveChanges();
+                    }
+                }
+                else
+                    MessageBox.Show("Невозможно удалить данную запись, так как она имеет отношения с другими цехами", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

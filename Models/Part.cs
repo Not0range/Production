@@ -18,6 +18,7 @@ namespace Production.Models
         /// <summary>
         /// ID заказа
         /// </summary>
+        [Required]
         public int OrderID { get; set; }
 
         /// <summary>
@@ -41,7 +42,7 @@ namespace Production.Models
         /// <summary>
         /// Составные детали
         /// </summary>
-        [RegularExpression("([0-9]+ )+")]
+        [RegularExpression("([0-9]+ )*[0-9]+")]
         public string Parts { get; set; }
 
         /// <summary>
@@ -58,7 +59,9 @@ namespace Production.Models
         {
             get
             {
-                return Parts.Split(' ').Select(s => int.Parse(s)).ToArray();
+                if(Parts != null)
+                    return Parts.Split(' ').Select(s => int.Parse(s)).ToArray();
+                return null;
             }
         }
 

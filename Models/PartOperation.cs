@@ -18,6 +18,7 @@ namespace Production.Models
         /// <summary>
         /// ID детали
         /// </summary>
+        [Required]
         public int PartID { get; set; }
 
         /// <summary>
@@ -61,6 +62,11 @@ namespace Production.Models
         /// </summary>
         [Required]
         public DateTime DateTime { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0} - {1}/{2}/{3} - {4} - {5}", Title, Guild, Brigade, WorkPlace, DateTime.ToString("dd.MM.yy"), Status.Convert());
+        }
     }
 
     public enum Status : int
