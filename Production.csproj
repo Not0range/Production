@@ -86,6 +86,12 @@
     <Compile Include="Forms\Orders\AddEditOrder.Designer.cs">
       <DependentUpon>AddEditOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Orders\AddEditOrderOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Orders\AddEditOrderOperation.Designer.cs">
+      <DependentUpon>AddEditOrderOperation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Orders\Orders.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Orders\AddEditOrder.resx">
       <DependentUpon>AddEditOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Orders\AddEditOrderOperation.resx">
+      <DependentUpon>AddEditOrderOperation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Orders\Orders.resx">
       <DependentUpon>Orders.cs</DependentUpon>

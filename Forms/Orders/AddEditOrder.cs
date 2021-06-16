@@ -55,7 +55,6 @@ namespace Production.Forms
 
                 using (var db = new DatabaseContext())
                 {
-                    
                     var order = new Models.Order 
                     { 
                         Number = (int)numericUpDown1.Value, 

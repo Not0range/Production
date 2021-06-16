@@ -66,7 +66,7 @@ namespace Production.Forms
             0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(243, 20);
-            this.numericUpDown1.TabIndex = 1;
+            this.numericUpDown1.TabIndex = 0;
             // 
             // label2
             // 
@@ -84,7 +84,7 @@ namespace Production.Forms
             this.textBox1.Location = new System.Drawing.Point(16, 74);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(243, 20);
-            this.textBox1.TabIndex = 3;
+            this.textBox1.TabIndex = 1;
             // 
             // label3
             // 
@@ -103,7 +103,7 @@ namespace Production.Forms
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(243, 57);
-            this.textBox2.TabIndex = 3;
+            this.textBox2.TabIndex = 2;
             // 
             // label4
             // 

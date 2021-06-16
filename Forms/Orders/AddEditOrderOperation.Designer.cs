@@ -1,7 +1,7 @@
 ﻿
 namespace Production.Forms
 {
-    partial class AddEditPartOperation
+    partial class AddEditOrderOperation
     {
         /// <summary>
         /// Required designer variable.
@@ -70,17 +70,17 @@ namespace Production.Forms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 53);
+            this.label2.Location = new System.Drawing.Point(16, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 13);
-            this.label2.TabIndex = 0;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Цех";
             // 
             // numericUpDown1
             // 
             this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown1.Location = new System.Drawing.Point(16, 70);
+            this.numericUpDown1.Location = new System.Drawing.Point(16, 74);
             this.numericUpDown1.Minimum = new decimal(new int[] {
             1,
             0,
@@ -98,17 +98,17 @@ namespace Production.Forms
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 93);
+            this.label3.Location = new System.Drawing.Point(16, 97);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 0;
+            this.label3.TabIndex = 2;
             this.label3.Text = "Бригада";
             // 
             // numericUpDown2
             // 
             this.numericUpDown2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown2.Location = new System.Drawing.Point(16, 110);
+            this.numericUpDown2.Location = new System.Drawing.Point(16, 114);
             this.numericUpDown2.Minimum = new decimal(new int[] {
             1,
             0,
@@ -126,17 +126,17 @@ namespace Production.Forms
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 133);
+            this.label4.Location = new System.Drawing.Point(16, 137);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 13);
-            this.label4.TabIndex = 0;
+            this.label4.TabIndex = 2;
             this.label4.Text = "Рабочее место";
             // 
             // numericUpDown3
             // 
             this.numericUpDown3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown3.Location = new System.Drawing.Point(16, 150);
+            this.numericUpDown3.Location = new System.Drawing.Point(16, 154);
             this.numericUpDown3.Minimum = new decimal(new int[] {
             1,
             0,
@@ -154,10 +154,10 @@ namespace Production.Forms
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 173);
+            this.label5.Location = new System.Drawing.Point(16, 177);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 13);
-            this.label5.TabIndex = 0;
+            this.label5.TabIndex = 4;
             this.label5.Text = "Статус";
             // 
             // comboBox1
@@ -170,7 +170,7 @@ namespace Production.Forms
             "Ожидает",
             "В работе",
             "Завершено"});
-            this.comboBox1.Location = new System.Drawing.Point(16, 190);
+            this.comboBox1.Location = new System.Drawing.Point(16, 193);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(227, 21);
             this.comboBox1.TabIndex = 4;
@@ -178,10 +178,10 @@ namespace Production.Forms
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 214);
+            this.label6.Location = new System.Drawing.Point(16, 217);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 13);
-            this.label6.TabIndex = 0;
+            this.label6.TabIndex = 6;
             this.label6.Text = "Дата и время";
             // 
             // dateTimePicker1
@@ -190,7 +190,7 @@ namespace Production.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.CustomFormat = "dd MMMM yyyy HH:mm";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(16, 231);
+            this.dateTimePicker1.Location = new System.Drawing.Point(16, 234);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(227, 20);
             this.dateTimePicker1.TabIndex = 5;
@@ -198,7 +198,7 @@ namespace Production.Forms
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(13, 265);
+            this.button1.Location = new System.Drawing.Point(13, 263);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
@@ -210,7 +210,7 @@ namespace Production.Forms
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(168, 265);
+            this.button2.Location = new System.Drawing.Point(167, 262);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 7;
@@ -219,8 +219,8 @@ namespace Production.Forms
             // 
             // button3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(12, 265);
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button3.Location = new System.Drawing.Point(13, 263);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 6;
@@ -229,30 +229,30 @@ namespace Production.Forms
             this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // AddEditPartOperation
+            // AddEditOrderOperation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(255, 300);
+            this.ClientSize = new System.Drawing.Size(255, 298);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.numericUpDown3);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "AddEditPartOperation";
+            this.Name = "AddEditOrderOperation";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Добавление";

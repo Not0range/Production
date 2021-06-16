@@ -47,6 +47,7 @@ namespace Production.Forms
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(209, 21);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.UseWaitCursor = true;
             // 
             // label1
             // 
@@ -56,6 +57,7 @@ namespace Production.Forms
             this.label1.Size = new System.Drawing.Size(26, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Цех";
+            this.label1.UseWaitCursor = true;
             // 
             // label2
             // 
@@ -65,6 +67,7 @@ namespace Production.Forms
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Пароль";
+            this.label2.UseWaitCursor = true;
             // 
             // textBox1
             // 
@@ -73,14 +76,16 @@ namespace Production.Forms
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
             this.textBox1.Size = new System.Drawing.Size(213, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBox1.TabIndex = 1;
+            this.textBox1.UseWaitCursor = true;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(13, 97);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Вход";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.UseWaitCursor = true;
@@ -95,6 +100,7 @@ namespace Production.Forms
             this.button2.TabIndex = 3;
             this.button2.Text = "Отмена";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseWaitCursor = true;
             // 
             // Auth
             // 

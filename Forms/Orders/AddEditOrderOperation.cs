@@ -10,16 +10,15 @@ using System.Windows.Forms;
 
 namespace Production.Forms
 {
-    public partial class AddEditPartOperation : Form
+    public partial class AddEditOrderOperation : Form
     {
-        int partId;
-        public Models.PartOperation operation;
-
-        public AddEditPartOperation(int partId, Models.PartOperation operation = null)
+        int orderId;
+        Models.OrderOperation operation;
+        public AddEditOrderOperation(int orderId, Models.OrderOperation operation = null)
         {
             InitializeComponent();
 
-            this.partId = partId;
+            this.orderId = orderId;
             using (var db = new DatabaseContext())
             {
                 if (Orders.guild != 0)
@@ -44,7 +43,6 @@ namespace Production.Forms
                 this.operation = operation;
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -57,17 +55,21 @@ namespace Production.Forms
                     builder.AppendLine("Поле 'Статус' должно быть заполнено");
                 if (builder.Length > 0)
                     throw new Exception(builder.ToString());
-                
-                operation = new Models.PartOperation
+                using (var db = new DatabaseContext())
                 {
-                    PartID = partId,
-                    Title = textBox1.Text,
-                    Guild = (int)numericUpDown1.Value,
-                    Brigade = (int)numericUpDown2.Value,
-                    WorkPlace = (int)numericUpDown3.Value,
-                    Status = (Models.Status)comboBox1.SelectedIndex,
-                    DateTime = dateTimePicker1.Value
-                };
+                    operation = new Models.OrderOperation
+                    {
+                        OrderID = orderId,
+                        Title = textBox1.Text,
+                        Guild = (int)numericUpDown1.Value,
+                        Brigade = (int)numericUpDown2.Value,
+                        WorkPlace = (int)numericUpDown3.Value,
+                        Status = (Models.Status)comboBox1.SelectedIndex,
+                        DateTime = dateTimePicker1.Value
+                    };
+                    db.OrderOperations.Add(operation);
+                    db.SaveChanges();
+                }
                 DialogResult = DialogResult.OK;
                 Close();
             }
@@ -90,15 +92,18 @@ namespace Production.Forms
                     builder.AppendLine("Поле 'Статус' должно быть заполнено");
                 if (builder.Length > 0)
                     throw new Exception(builder.ToString());
-                
-                operation.PartID = partId;
-                operation.Title = textBox1.Text;
-                operation.Guild = (int)numericUpDown1.Value;
-                operation.Brigade = (int)numericUpDown2.Value;
-                operation.WorkPlace = (int)numericUpDown3.Value;
-                operation.Status = (Models.Status)comboBox1.SelectedIndex;
-                operation.DateTime = dateTimePicker1.Value;
-                
+                using (var db = new DatabaseContext())
+                {
+                    operation = db.OrderOperations.First(i => i.ID == operation.ID);
+                    operation.OrderID = orderId;
+                    operation.Title = textBox1.Text;
+                    operation.Guild = (int)numericUpDown1.Value;
+                    operation.Brigade = (int)numericUpDown2.Value;
+                    operation.WorkPlace = (int)numericUpDown3.Value;
+                    operation.Status = (Models.Status)comboBox1.SelectedIndex;
+                    operation.DateTime = dateTimePicker1.Value;
+                    db.SaveChanges();
+                }
                 DialogResult = DialogResult.OK;
                 Close();
             }

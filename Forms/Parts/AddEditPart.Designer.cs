@@ -66,7 +66,7 @@ namespace Production.Forms
             this.textBox1.Location = new System.Drawing.Point(16, 30);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(356, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBox1.TabIndex = 0;
             // 
             // label2
             // 
@@ -94,7 +94,7 @@ namespace Production.Forms
             0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(356, 20);
-            this.numericUpDown1.TabIndex = 2;
+            this.numericUpDown1.TabIndex = 1;
             this.numericUpDown1.Value = new decimal(new int[] {
             1,
             0,
@@ -117,7 +117,7 @@ namespace Production.Forms
             this.listBox1.Location = new System.Drawing.Point(16, 110);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(179, 147);
-            this.listBox1.TabIndex = 3;
+            this.listBox1.TabIndex = 2;
             // 
             // comboBox1
             // 
@@ -127,14 +127,14 @@ namespace Production.Forms
             this.comboBox1.Location = new System.Drawing.Point(202, 110);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(170, 21);
-            this.comboBox1.TabIndex = 4;
+            this.comboBox1.TabIndex = 3;
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(201, 137);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
+            this.button1.TabIndex = 11;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -165,14 +165,14 @@ namespace Production.Forms
             this.listBox2.Location = new System.Drawing.Point(16, 276);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(179, 147);
-            this.listBox2.TabIndex = 3;
+            this.listBox2.TabIndex = 7;
             // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(201, 276);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 5;
+            this.button3.TabIndex = 8;
             this.button3.Text = "Добавить";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -182,7 +182,7 @@ namespace Production.Forms
             this.button4.Location = new System.Drawing.Point(201, 334);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 6;
+            this.button4.TabIndex = 10;
             this.button4.Text = "Удалить";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -205,7 +205,7 @@ namespace Production.Forms
             this.button6.Location = new System.Drawing.Point(297, 436);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 5;
+            this.button6.TabIndex = 12;
             this.button6.Text = "Отмена";
             this.button6.UseVisualStyleBackColor = true;
             // 
@@ -216,7 +216,7 @@ namespace Production.Forms
             this.button7.Location = new System.Drawing.Point(16, 436);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 5;
+            this.button7.TabIndex = 11;
             this.button7.Text = "Применить";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Visible = false;
@@ -227,7 +227,7 @@ namespace Production.Forms
             this.button8.Location = new System.Drawing.Point(201, 305);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 5;
+            this.button8.TabIndex = 9;
             this.button8.Text = "Изменить";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);

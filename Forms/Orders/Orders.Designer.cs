@@ -55,6 +55,8 @@ namespace Production.Forms
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -69,6 +71,7 @@ namespace Production.Forms
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -84,13 +87,14 @@ namespace Production.Forms
             this.Documentation,
             this.Date});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 38);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(480, 413);
+            this.dataGridView1.Size = new System.Drawing.Size(480, 375);
+            this.dataGridView1.StandardTab = true;
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -149,7 +153,7 @@ namespace Production.Forms
             this.button4.Location = new System.Drawing.Point(647, 13);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 0;
+            this.button4.TabIndex = 13;
             this.button4.Text = "Закрыть";
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -159,7 +163,7 @@ namespace Production.Forms
             this.button3.Location = new System.Drawing.Point(175, 13);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 0;
+            this.button3.TabIndex = 3;
             this.button3.Text = "Удалить";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -170,7 +174,7 @@ namespace Production.Forms
             this.button2.Location = new System.Drawing.Point(94, 13);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
+            this.button2.TabIndex = 2;
             this.button2.Text = "Изменить";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -181,7 +185,7 @@ namespace Production.Forms
             this.button1.Location = new System.Drawing.Point(13, 13);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 1;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -204,8 +208,7 @@ namespace Production.Forms
             this.splitContainer1.Panel2MinSize = 100;
             this.splitContainer1.Size = new System.Drawing.Size(250, 413);
             this.splitContainer1.SplitterDistance = 205;
-            this.splitContainer1.TabIndex = 2;
-            this.splitContainer1.TabStop = false;
+            this.splitContainer1.TabIndex = 9;
             // 
             // groupBox1
             // 
@@ -227,7 +230,7 @@ namespace Production.Forms
             this.listBox1.Location = new System.Drawing.Point(3, 16);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(244, 154);
-            this.listBox1.TabIndex = 1;
+            this.listBox1.TabIndex = 5;
             // 
             // panel2
             // 
@@ -246,7 +249,7 @@ namespace Production.Forms
             this.button5.Location = new System.Drawing.Point(3, 6);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 0;
+            this.button5.TabIndex = 6;
             this.button5.Text = "Добавить";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -257,7 +260,7 @@ namespace Production.Forms
             this.button7.Location = new System.Drawing.Point(165, 6);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 0;
+            this.button7.TabIndex = 8;
             this.button7.Text = "Удалить";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -268,7 +271,7 @@ namespace Production.Forms
             this.button6.Location = new System.Drawing.Point(84, 6);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 0;
+            this.button6.TabIndex = 7;
             this.button6.Text = "Изменить";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -312,9 +315,10 @@ namespace Production.Forms
             this.button8.Location = new System.Drawing.Point(3, 6);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 0;
+            this.button8.TabIndex = 10;
             this.button8.Text = "Добавить";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button10
             // 
@@ -322,9 +326,10 @@ namespace Production.Forms
             this.button10.Location = new System.Drawing.Point(165, 6);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 0;
+            this.button10.TabIndex = 12;
             this.button10.Text = "Удалить";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -332,9 +337,10 @@ namespace Production.Forms
             this.button9.Location = new System.Drawing.Point(84, 6);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 0;
+            this.button9.TabIndex = 11;
             this.button9.Text = "Изменить";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // splitContainer2
             // 
@@ -345,6 +351,7 @@ namespace Production.Forms
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.Controls.Add(this.dataGridView1);
+            this.splitContainer2.Panel1.Controls.Add(this.groupBox3);
             this.splitContainer2.Panel1MinSize = 300;
             // 
             // splitContainer2.Panel2
@@ -353,7 +360,27 @@ namespace Production.Forms
             this.splitContainer2.Panel2MinSize = 250;
             this.splitContainer2.Size = new System.Drawing.Size(734, 413);
             this.splitContainer2.SplitterDistance = 480;
-            this.splitContainer2.TabIndex = 3;
+            this.splitContainer2.TabIndex = 4;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox3.Location = new System.Drawing.Point(0, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(480, 38);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Поиск";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Location = new System.Drawing.Point(3, 16);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(474, 20);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Orders
             // 
@@ -380,6 +407,8 @@ namespace Production.Forms
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -412,5 +441,7 @@ namespace Production.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Documentation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
