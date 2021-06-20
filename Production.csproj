@@ -114,6 +114,14 @@
     <Compile Include="Migrations\202106112122535_InitialCreate.designer.cs">
       <DependentUpon>202106112122535_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106200943215_AddShippingDate.cs" />
+    <Compile Include="Migrations\202106200943215_AddShippingDate.designer.cs">
+      <DependentUpon>202106200943215_AddShippingDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106200948045_AddShippingDateNotNull.cs" />
+    <Compile Include="Migrations\202106200948045_AddShippingDateNotNull.designer.cs">
+      <DependentUpon>202106200948045_AddShippingDateNotNull.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Order.cs" />
@@ -152,6 +160,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106112122535_InitialCreate.resx">
       <DependentUpon>202106112122535_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106200943215_AddShippingDate.resx">
+      <DependentUpon>202106200943215_AddShippingDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106200948045_AddShippingDateNotNull.resx">
+      <DependentUpon>202106200948045_AddShippingDateNotNull.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

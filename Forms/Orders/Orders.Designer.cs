@@ -30,12 +30,6 @@ namespace Production.Forms
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Characteristics = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Documentation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -57,6 +51,13 @@ namespace Production.Forms
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Characteristics = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Documentation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -85,7 +86,8 @@ namespace Production.Forms
             this.Title,
             this.Characteristics,
             this.Documentation,
-            this.Date});
+            this.Date,
+            this.EndDate});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 38);
             this.dataGridView1.MultiSelect = false;
@@ -97,43 +99,6 @@ namespace Production.Forms
             this.dataGridView1.StandardTab = true;
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // Number
-            // 
-            this.Number.HeaderText = "Номер заказа";
-            this.Number.Name = "Number";
-            this.Number.ReadOnly = true;
-            // 
-            // Title
-            // 
-            this.Title.HeaderText = "Наименование";
-            this.Title.Name = "Title";
-            this.Title.ReadOnly = true;
-            // 
-            // Characteristics
-            // 
-            this.Characteristics.HeaderText = "Характеристики";
-            this.Characteristics.Name = "Characteristics";
-            this.Characteristics.ReadOnly = true;
-            // 
-            // Documentation
-            // 
-            this.Documentation.HeaderText = "Документация";
-            this.Documentation.Name = "Documentation";
-            this.Documentation.ReadOnly = true;
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Дата заказа";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
             // 
             // panel1
             // 
@@ -382,6 +347,49 @@ namespace Production.Forms
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // Number
+            // 
+            this.Number.HeaderText = "Код заказа";
+            this.Number.Name = "Number";
+            this.Number.ReadOnly = true;
+            // 
+            // Title
+            // 
+            this.Title.HeaderText = "Наименование";
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
+            // 
+            // Characteristics
+            // 
+            this.Characteristics.HeaderText = "Характеристики";
+            this.Characteristics.Name = "Characteristics";
+            this.Characteristics.ReadOnly = true;
+            // 
+            // Documentation
+            // 
+            this.Documentation.HeaderText = "Документация";
+            this.Documentation.Name = "Documentation";
+            this.Documentation.ReadOnly = true;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Дата заказа";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // EndDate
+            // 
+            this.EndDate.HeaderText = "Дата отгрузки";
+            this.EndDate.Name = "EndDate";
+            this.EndDate.ReadOnly = true;
+            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -434,14 +442,15 @@ namespace Production.Forms
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn Characteristics;
         private System.Windows.Forms.DataGridViewTextBoxColumn Documentation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EndDate;
     }
 }

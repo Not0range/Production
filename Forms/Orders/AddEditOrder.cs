@@ -32,6 +32,7 @@ namespace Production.Forms
                     textBox2.Text = order.Characteristics;
                     textBox3.Text = order.Documentation;
                     dateTimePicker1.Value = order.OrderDate;
+                    dateTimePicker2.Value = order.ShippingDate;
                 }
 
                 this.order = order;
@@ -61,7 +62,8 @@ namespace Production.Forms
                         Title = textBox1.Text,
                         Characteristics = textBox2.Text,
                         Documentation = textBox3.Text,
-                        OrderDate = dateTimePicker1.Value
+                        OrderDate = dateTimePicker1.Value,
+                        ShippingDate = dateTimePicker2.Value
                     };
                     db.Orders.Add(order);
                     db.SaveChanges();
@@ -99,6 +101,7 @@ namespace Production.Forms
                     order.Characteristics = textBox2.Text;
                     order.Documentation = textBox3.Text;
                     order.OrderDate = dateTimePicker1.Value;
+                    order.ShippingDate = dateTimePicker2.Value;
                     db.SaveChanges();
                 }
                 DialogResult = DialogResult.OK;

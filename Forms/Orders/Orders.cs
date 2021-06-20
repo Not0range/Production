@@ -48,7 +48,8 @@ namespace Production.Forms
                             new DataGridViewTextBoxCell { Value = order.Title },
                             new DataGridViewTextBoxCell { Value = order.Characteristics },
                             new DataGridViewTextBoxCell { Value = order.Documentation },
-                            new DataGridViewTextBoxCell { Value = order.OrderDate.ToString("dd.MM.yyyy") });
+                            new DataGridViewTextBoxCell { Value = order.OrderDate.ToString("dd.MM.yyyy") },
+                            new DataGridViewTextBoxCell { Value = order.ShippingDate.ToString("dd.MM.yyyy") });
                         Invoke(new Action(() => dataGridView1.Rows.Add(row)));
                     }
                 }
@@ -58,15 +59,16 @@ namespace Production.Forms
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 0)
-                return;
-
             listBox1.Items.Clear();
             listBox2.Items.Clear();
+
+            if (dataGridView1.SelectedRows.Count == 0)
+                return;
             int id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
             using (var db = new DatabaseContext())
             {
-                listBox1.Items.AddRange(db.Parts.Where(i => i.OrderID == id).ToArray());
+                var p = db.Database.SqlQuery<Models.Part>("exec GetDetails @p0", id);
+                listBox1.Items.AddRange(p.ToArray());
                 listBox2.Items.AddRange(db.OrderOperations.Where(i => i.OrderID == id).ToArray());
             }
         }

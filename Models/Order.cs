@@ -46,6 +46,12 @@ namespace Production.Models
         public DateTime OrderDate { get; set; }
 
         /// <summary>
+        /// Дата отгрузки
+        /// </summary>
+        [Column(TypeName = "date"), Required]
+        public DateTime ShippingDate { get; set; }
+
+        /// <summary>
         /// Составные детали
         /// </summary>
         [InverseProperty("Order")]
